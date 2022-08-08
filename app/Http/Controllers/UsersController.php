@@ -57,7 +57,7 @@ class UsersController extends Controller
     public function show($id)
     {
         $user = $this->users->getUser($id);
-        return view('users.show', ['user' => $user]);
+        return view('users.ver', ['user' => $user]);
     }
 
     /**

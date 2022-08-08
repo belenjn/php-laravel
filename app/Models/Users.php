@@ -18,6 +18,8 @@ class Users extends Model
         return Users::all();
     }
 
+    protected $primaryKey = 'user_id';
+
     public function getUser($id)
     {
         return Users::find($id);
