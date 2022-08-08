@@ -34,20 +34,18 @@ Route::get('/rooms', function () {
     return 'Rooms';
 });
 
-Route::get('/rooms/roomlist', function () {
-    return 'Room list';
-});
-
-Route::get('/rooms/roomlist/roomdetail/{id}', function ($id) {
+Route::get('/rooms/{id}', function ($id) {
     return 'Room Detail: {$id}';
 });
 
-Route::post('/rooms/{checkin}-{checkout}', function ($checkin, $checkout) {
+Route::get('/rooms', function ($checkin, $checkout) {
     if($checkin && $checkout) {
         return "Rooms available from {$checkin} to {$checkout}";
     } else {
         return "there are no rooms available on that date";
     }
 });
+
+// la url debería quedar como /rooms/result?checkin=2022-10-01&checkout=2022-10-07
 
 
