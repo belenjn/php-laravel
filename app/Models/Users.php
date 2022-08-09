@@ -11,7 +11,9 @@ class Users extends Model
 
     protected $table = "users";
 
-    protected $fillable = ["user_id", "user_name", "user_email", "user_phone", "start_date", "occupation", "user_image", "status", "password"];
+    protected $fillable = ["user_name", "user_email", "user_phone", "start_date", "occupation", "user_image", "status", "password"];
+
+    public $timestamps = false;
 
     public function getUsers()
     {

@@ -23,6 +23,7 @@
             border-collapse: collapse;
             width: 100%;
             margin: auto;
+            margin-top: 20px;
         }
 
         th {
@@ -53,10 +54,13 @@
             display: inline-block;
             font-size: 16px;
         }
+
     </style>
 </head>
 <body>
     <h2>Users</h2>
+    <a href="/users/crear">New user</a>
+
     <table>
         <tr>
             <th>Id</th>
@@ -80,16 +84,20 @@
             <td>{{$user->user_image}}</td>
             <td>{{$user->status}}</td>
             <td>{{$user->password}}</td>
-            <!-- <td>
-                <a href="/users/show{{$user->id}}">Show</a>
-                <a href="/users/edit{{$user->id}}">Edit</a>
-                <a href="/users/delete{{$user->id}}">Delete</a>
+            <td>
+                <a href="/users/ver/{{$user->user_id}}">Show</a>
+                <a href="/users/editar/{{$user->user_id}}">Edit</a>
+                <a href="/users/eliminar/{{$user->user_id}}" onClick="return deleteUser('Delete User')">Delete</a>
             </td>
-        </tr> -->
+        </tr>
         @endforeach
     </table>
     <br>
-    <a href="/users/create">New user</a>
    
 </body>
+<script>
+    function deleteUser(value) {
+        action = confirm(value) ? true : event.preventDefault()
+    }
+</script>
 </html>

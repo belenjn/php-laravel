@@ -32,7 +32,12 @@ Route::get('/offers', function () {
 
 
 Route::get('/users', [UsersController::class, 'index']);
+Route::get('/users/crear', [UsersController::class, 'create']);
+Route::post('/users/crear', [UsersController::class, 'store']);
 Route::get('/users/ver/{id}', [UsersController::class, 'show']);
+Route::get('/users/editar/{id}', [UsersController::class, 'edit']);
+Route::put('/users/editar/{id}', [UsersController::class, 'update']);
+Route::get('/users/eliminar/{id}', [UsersController::class, 'destroy']);
 Route::get('/contacts', [ContactsController::class, 'index']);
 Route::get('/rooms', [RoomsController::class, 'index']);
 Route::get('/bookings', [BookingsController::class, 'index']);
