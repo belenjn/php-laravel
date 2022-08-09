@@ -38,7 +38,16 @@ Route::get('/users/ver/{id}', [UsersController::class, 'show']);
 Route::get('/users/editar/{id}', [UsersController::class, 'edit']);
 Route::put('/users/editar/{id}', [UsersController::class, 'update']);
 Route::get('/users/eliminar/{id}', [UsersController::class, 'destroy']);
+
 Route::get('/contacts', [ContactsController::class, 'index']);
+Route::get('/contacts/crear', [ContactsController::class, 'create']);
+Route::post('/contacts/crear', [ContactsController::class, 'store']);
+Route::get('/contacts/ver/{id}', [ContactsController::class, 'show']);
+Route::get('/contacts/editar/{id}', [ContactsController::class, 'edit']);
+Route::put('/contacts/editar/{id}', [ContactsController::class, 'update']);
+Route::get('/contacts/eliminar/{id}', [ContactsController::class, 'destroy']);
+
+
 Route::get('/rooms', [RoomsController::class, 'index']);
 Route::get('/bookings', [BookingsController::class, 'index']);
 

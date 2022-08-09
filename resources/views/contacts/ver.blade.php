@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Show User</title>
+    <title>Show Contact</title>
     <style>
 
 
@@ -38,7 +38,7 @@
 
 
         .image {
-            background-image: url({{$user->user_image}});
+            background-image: url({{$contact->contact_image}});
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
@@ -79,47 +79,25 @@
 
 
         }
-
-        .image_div {
-            display: grid;
-            grid-column: 2;
-        }
-        
-
-        .image {
-            background-image: url({{$user->user_image}});
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            border: none;
-            height: 150px;
-            width: 150px;
-            margin: auto;
-            margin-bottom: 220px;
-        }
         
     }
         
     </style>
 </head>
 <body>
-    <a href="/users">See all users</a>
-   <h2>User Detail:</h2> 
+    <a href="/contacts">See all contacts</a>
+   <h2>Contact Detail:</h2> 
    <div class="grid">
    <div class="text">
-       <p><b>Id: </b>{{$user->user_id}}</p>
-       <p><b>Name: </b>{{$user->user_name}}</p>
-       <p><b>Email: </b>{{$user->user_email}}</p>
-       <p><b>Phone: </b>{{$user->user_phone}}</p>
-       <p><b>Date: </b>{{$user->start_date}}</p>
-       <p><b>Occupation: </b>{{$user->occupation}}</p>
-       <p><b>Image: </b>{{$user->user_image}}</p>
-       <p><b>Status: </b>{{$user->status}}</p>
-       <p><b>Password: </b>{{$user->password}}</p>
-   </div>
-   <div class="image_div">
-   <div class="image"/>
-
+       <p><b>Id: </b>{{$contact->contact_id}}</p>
+       <p><b>Name: </b>{{$contact->contact_name}}</p>
+       <p><b>Email: </b>{{$contact->contact_email}}</p>
+       <p><b>Phone: </b>{{$contact->contact_phone}}</p>
+       <p><b>Date: </b>{{$contact->contact_date}}</p>
+       <p><b>Subject: </b>{{$contact->subject}}</p>
+       <p><b>Comment: </b>{{$contact->comment}}</p>
+       <p><b>Viewed: </b>{{$contact->viewed}}</p>
+       <p><b>Archived: </b>{{$contact->archived}}</p>
    </div>
 
    </div>

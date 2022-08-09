@@ -22,8 +22,9 @@
 
         table {
             border-collapse: collapse;
-            width: 90%;
+            width: 100%;
             margin: auto;
+            margin-top: 20px;
 
         }
 
@@ -60,6 +61,8 @@
 </head>
 <body>
     <h2>Contacts</h2>
+    <a href="/contacts/crear">New contact</a>
+
     <table>
         <tr>
             <th>Id</th>
@@ -83,16 +86,20 @@
             <td>{{$contact->comment}}</td>
             <td>{{$contact->viewed}}</td>
             <td>{{$contact->archived}}</td>
-            <!-- <td>
-                <a href="/contacts/show{{$contact->id}}">Show</a>
-                <a href="/contacts/edit{{$contact->id}}">Edit</a>
-                <a href="/contacts/delete{{$contact->id}}">Delete</a>
+            <td>
+                <a href="/contacts/ver/{{$contact->contact_id}}">Show</a>
+                <a href="/contacts/editar/{{$contact->contact_id}}">Edit</a>
+                <a href="/contacts/eliminar/{{$contact->contact_id}}" onClick="return deleteContact('Delete Contact')">Delete</a>
             </td>
-        </tr> -->
+        </tr> 
         @endforeach
     </table>
     <br>
-    <a href="/contacts/create">New contact</a>
    
 </body>
+<script>
+    function deleteContact(value) {
+        action = confirm(value) ? true : event.preventDefault()
+    }
+</script>
 </html>

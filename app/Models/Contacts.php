@@ -11,12 +11,16 @@ class Contacts extends Model
 
     protected $table = "contacts";
 
-    protected $fillable = ["contact_id", "contact_name", "contact_email", "contact_phone", "contact_date", "subject", "comment", "viewed", "archived"];
+    protected $fillable = ["contact_name", "contact_email", "contact_phone", "contact_date", "subject", "comment", "viewed", "archived"];
+
+    public $timestamps = false;
 
     public function getContacts()
     {
         return Contacts::all();
     }
+
+    protected $primaryKey = 'contact_id';
 
     public function getContact($id)
     {
