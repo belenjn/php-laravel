@@ -57,8 +57,14 @@ Route::put('/rooms/editar/{id}', [RoomsController::class, 'update']);
 Route::get('/rooms/eliminar/{id}', [RoomsController::class, 'destroy']);
 
 Route::get('/bookings', [BookingsController::class, 'index']);
+Route::get('/bookings/crear', [BookingsController::class, 'create']);
+Route::post('/bookings/crear', [BookingsController::class, 'store']);
+Route::get('/bookings/ver/{id}', [BookingsController::class, 'show']);
+Route::get('/bookings/editar/{id}', [BookingsController::class, 'edit']);
+Route::put('/bookings/editar/{id}', [BookingsController::class, 'update']);
+Route::get('/bookings/eliminar/{id}', [BookingsController::class, 'destroy']);
 
 
-// la url debería quedar como /rooms/result?checkin=2022-10-01&checkout=2022-10-07
+
 
 

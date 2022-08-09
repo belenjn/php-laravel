@@ -11,12 +11,18 @@ class Bookings extends Model
 
     protected $table = "bookings";
 
-    protected $fillable = ["booking_id", "guest_name", "order_date", "checkin", "checkout", "special_request", "room_id", "status"];
+    protected $fillable = ["guest_name", "order_date", "checkin", "checkout", "special_request", "room_id", "status"];
+
+    public $timestamps = false;
+
 
     public function getBookings()
     {
         return Bookings::all();
     }
+
+    protected $primaryKey = 'booking_id';
+
 
     public function getBooking($id)
     {

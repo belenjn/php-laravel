@@ -23,6 +23,7 @@
             border-collapse: collapse;
             width: 100%;
             margin: auto;
+            margin-top: 20px;
         }
 
         th {
@@ -57,6 +58,8 @@
 </head>
 <body>
     <h2>Bookings</h2>
+    <a href="/bookings/crear">New booking</a>
+
     <table>
         <tr>
             <th>Id</th>
@@ -78,16 +81,20 @@
             <td>{{$booking->special_request}}</td>
             <td>{{$booking->room_id}}</td>
             <td>{{$booking->status}}</td>
-            <!-- <td>
-                <a href="/bookings/show{{$booking->id}}">Show</a>
-                <a href="/bookings/edit{{$booking->id}}">Edit</a>
-                <a href="/bookings/delete{{$booking->id}}">Delete</a>
+            <td>
+                <a href="/bookings/ver/{{$booking->booking_id}}">Show</a>
+                <a href="/bookings/editar/{{$booking->booking_id}}">Edit</a>
+                <a href="/bookings/eliminar/{{$booking->booking_id}}" onClick="return deleteBooking('Delete Booking')">Delete</a>
             </td>
-        </tr> -->
+        </tr> 
         @endforeach
     </table>
     <br>
-    <a href="/bookings/create">New booking</a>
    
 </body>
+<script>
+    function deleteBooking(value) {
+        action = confirm(value) ? true : event.preventDefault()
+    }
+</script>
 </html>
