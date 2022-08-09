@@ -23,6 +23,8 @@
             border-collapse: collapse;
             width: 100%;
             margin: auto;
+            margin-top: 20px;
+
         }
 
         th {
@@ -57,6 +59,8 @@
 </head>
 <body>
     <h2>Rooms</h2>
+    <a href="/rooms/crear">New room</a>
+
     <table>
         <tr>
             <th>Id</th>
@@ -80,16 +84,20 @@
             <td>{{$room->discount}}</td>
             <td>{{$room->cancellation}}</td>
             <td>{{$room->amenities}}</td>
-            <!-- <td>
-                <a href="/rooms/show{{$room->id}}">Show</a>
-                <a href="/rooms/edit{{$room->id}}">Edit</a>
-                <a href="/rooms/delete{{$room->id}}">Delete</a>
+            <td>
+                <a href="/rooms/ver/{{$room->room_id}}">Show</a>
+                <a href="/rooms/editar/{{$room->room_id}}">Edit</a>
+                <a href="/rooms/eliminar/{{$room->room_id}}" onClick="return deleteRoom('Delete Room')">Delete</a>
             </td>
-        </tr> -->
+        </tr>
         @endforeach
     </table>
     <br>
-    <a href="/rooms/create">New room</a>
    
 </body>
+<script>
+    function deleteRoom(value) {
+        action = confirm(value) ? true : event.preventDefault()
+    }
+</script>
 </html>

@@ -49,6 +49,13 @@ Route::get('/contacts/eliminar/{id}', [ContactsController::class, 'destroy']);
 
 
 Route::get('/rooms', [RoomsController::class, 'index']);
+Route::get('/rooms/crear', [RoomsController::class, 'create']);
+Route::post('/rooms/crear', [RoomsController::class, 'store']);
+Route::get('/rooms/ver/{id}', [RoomsController::class, 'show']);
+Route::get('/rooms/editar/{id}', [RoomsController::class, 'edit']);
+Route::put('/rooms/editar/{id}', [RoomsController::class, 'update']);
+Route::get('/rooms/eliminar/{id}', [RoomsController::class, 'destroy']);
+
 Route::get('/bookings', [BookingsController::class, 'index']);
 
 

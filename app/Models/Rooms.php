@@ -11,12 +11,16 @@ class Rooms extends Model
 
     protected $table = "rooms";
 
-    protected $fillable = ["room_id", "room_number", "bed_type", "description", "offer", "price", "discount", "cancellation", "amenities"];
+    protected $fillable = ["room_number", "bed_type", "description", "offer", "price", "discount", "cancellation", "amenities"];
+
+    public $timestamps = false;
 
     public function getRooms()
     {
         return Rooms::all();
     }
+
+    protected $primaryKey = 'room_id';
 
     public function getRoom($id)
     {
