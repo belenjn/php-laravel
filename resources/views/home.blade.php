@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT&family=Roboto:wght@100&display=swap"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300&family=Old+Standard+TT&display=swap"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@100&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{asset('css/home.css')}}" />
+  <title>Hotel Miranda</title>
+</head>
+<div class="navbar__header">
+
+  <nav class="navbar">
+    <div class="navbar__container">
+      <div class="navbar__container-icon">
+        <input src="./assets/nav/hamburger-icon.png" alt="boton hamburguesa" class="navbar__hamburger" />
+      </div>
+      <div class="navbar__container-logo">
+        <img src="{{asset('./assets/nav/logo-nav.png')}}" alt="logo del hotel" class="navbar__logo" />
+      </div>
+      <div class="navbar__categories">
+        <li>About Us</li>
+        <li>Rooms</li>
+        <li>Offers</li>
+        <li>Contact</li>
+      </div>
+      <div class="navbar__container-icons-right">
+        <img src="./assets/nav/person.png" alt="personal" class="navbar__person" />
+        <img src="./assets/nav/lupa.png" alt="lupa" class="navbar__search" />
+      </div>
+    </div>
+</div>
+</nav>
+
+<body>
+  <header class="header">
+    <div class="header__container">
+      <div class="header__container-titles">
+        <h4>THE ULTIMATE LUXURY EXPERIENCE</h4>
+        <h2>The Perfect Base For You</h2>
+      </div>
+
+      <button class="button__primary">TAKE A TOUR</button>
+      <button class="button__secondary">LEARN MORE</button>
+    </div>
+
+    <div class="form__container">
+      <form>
+        <fieldset>
+          <p>
+            <label for="size_1">Arrival Date</label>
+            <br />
+            <img src="./assets/form/Group.png" alt="calendar icon" />
+            <input class="form__input" type="text" placeholder="24th march 2020" />
+          </p>
+          <p>
+            <label for="size_2">Departure Date</label>
+            <br />
+            <img src="./assets/form/Group.png" alt="calendar icon" />
+            <input class="form__input" type="text" placeholder="30th march 2020">
+            </input>
+          </p>
+          <button class="button__primary">CHECK AVAILABILITY</button>
+
+        </fieldset>
+      </form>
+    </div>
+
+  </header>
+
+  <main class="main__container">
+    <div class="main__container--text">
+      <h4>ABOUT US</h4>
+      <h1>Discover Our Underground.</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat.
+      </p>
+      <button class="button__primary">BOOK NOW</button>
+
+    </div>
+    <div class="main__container--photos">
+
+
+      <div class="fake-photo" id="first-photo">
+        <img src="./assets/about-us/fake-photo.png" alt="photo"></img>
+      </div>
+      <div class="strong__team">
+        <img src="./assets/team/team.png" alt="team" class="logo" />
+        <h2>Strong Team</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+      </div>
+
+      <div class="fake-photo">
+        <img src="./assets/about-us/fake-photo.png" alt="photo"></img>
+      </div>
+      <div class="luxury__room">
+        <img src="./assets/team/luxury-room.png" alt="team" class="logo" />
+        <h2>Luxury Room</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+      </div>
+    </div>
+  </main>
+
+  <div class="main__rooms">
+    <h4>ROOMS</h4>
+    <h1>Hand Picked Rooms</h1>
+
+    <div class="slider">
+      <div class="rooms__navbar">
+        <img src="./assets/rooms/navbar_rooms/bed.png" />
+        <img src="./assets/rooms/navbar_rooms/wifi.png" />
+        <img src="./assets/rooms/navbar_rooms/car.png" />
+        <img src="./assets/rooms/navbar_rooms/snow.png" />
+        <img src="./assets/rooms/navbar_rooms/gym.png" />
+        <img src="./assets/rooms/navbar_rooms/smoke.png" />
+        <img src="./assets/rooms/navbar_rooms/cocktel.png" />
+      </div>
+      <img src="./assets/about-us/fake-photo.png" />
+
+    </div>
+    <div class="slider__container--bottom">
+      <h3>Minimal Duplex Room</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+      </p>
+      <div class="pricing">
+        <h3>$345<small>/Night</small></h3>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="video__container">
+    <div class="text__container">
+      <h4>INTRO VIDEO</h4>
+      <h1>Meet With Our Luxury Place.</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat you have to understand this.
+      </p>
+
+      <button class="button__primary">BOOK NOW</button>
+
+    </div>
+    <div class="image__container">
+      <img src="./assets/about-us/fake-photo.png" class="fake-photo" alt="fake photo" />
+    </div>
+
+  </div>
+
+  <div class="facilities__container">
+
+    <!-- Hay que cambiar en la vista de ordenador, por un slider  -->
+    <h4>FACILITIES</h4>
+    <h1>Core Features</h1>
+    <div>
+      <img src="./assets/facilities/finger.png" class="finger" alt="finger with stars" />
+      <img src="./assets/facilities/01.png" class="number" alt="number 01" />
+    </div>
+
+
+    <div class="donut__container">
+      <!-- Hay que añadir el slider en la vista de ordenador  -->
+      <h3>Have High Rating</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna..</p>
+      <img src="./assets/facilities/slider-buttons.png" class="slider-buttons" alt="mini slider with buttons" />
+
+      <img src="./assets/facilities/donut.png" class="donut" alt="donut" />
+    </div>
+
+  </div>
+
+
+  <div class="menu__container">
+    <h4>MENU</h4>
+    <h1>Our Foods Menu</h1>
+    <div class="menu__list">
+      <div class="menu__list--photo">
+        <img src="./assets/about-us/fake-photo.png" />
+
+      </div>
+      <div class="menu__list--text">
+        <h4>
+          Eggs & Bacon
+        </h4>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.
+        </p>
+      </div>
+    </div>
+
+    <div class="menu__list">
+      <div class="menu__list--photo">
+        <img src="./assets/about-us/fake-photo.png" />
+
+      </div>
+      <div class="menu__list--text">
+        <h4>
+          Tea or Coffee
+        </h4>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.
+        </p>
+      </div>
+    </div>
+    <div class="menu__list">
+      <div class="menu__list--photo">
+        <img src="./assets/about-us/fake-photo.png" />
+
+      </div>
+      <div class="menu__list--text">
+        <h4>
+          Chia Oatmeal
+        </h4>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="menu__container--buttons">
+    <div class="right">
+      <h6>
+        >
+      </h6>
+    </div>
+
+    <div class="left">
+      <h6>
+        < </h6>
+    </div>
+
+
+  </div>
+
+  <div class="little-slider__container">
+    <img src="./assets/about-us/fake-photo.png" alt="fake photo" class="fake-photo" />
+
+    <img src="./assets/menu/little-slider.png" alt="little slider" class="little-slider" />
+
+  </div>
+
+  <div class="pre-footer__container">
+
+    <div class="pre-footer__container--images">
+
+      <img src="./assets/pre-footer/rocket.png" alt="rocket" />
+
+      <h2>84k<small>+</small></h2>
+      <p>Projects are Completed</p>
+
+
+    </div>
+    <div class="pre-footer__container--images">
+
+      <img src="./assets/pre-footer/people.png" alt="rocket" />
+
+      <h2>10M<small>+</small></h2>
+      <p>Active Backers Around World</p>
+
+
+    </div>
+    <div class="pre-footer__container--images">
+
+      <img src="./assets/pre-footer/person-money.png" alt="rocket" />
+
+      <h2>02k<small>+</small></h2>
+      <p>Categories Served</p>
+
+
+    </div>
+    <div class="pre-footer__container--images">
+
+      <img src="./assets/pre-footer/book.png" alt="rocket" />
+
+      <h2>100M<small>+</small></h2>
+      <p>Idea Raised Funds</p>
+
+
+    </div>
+  </div>
+
+</body>
+
+<footer>
+  <div class="footer__socials">
+
+    <img src="./assets/footer/Logo.png" />
+
+    <p>Lorem ipsum dolor sit amet, consect etur adipisicing elit, sed doing eius mod tempor incididunt ut labore et
+      dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat ion ullamco laboris nisi.</p>
+
+    <img src="./assets/footer/Socials.png" class="socials" />
+
+  </div>
+
+
+
+  <div class="footer__services">
+  <h4>Services.</h4> <br/>
+
+    <ul>
+      <li>+ Restaurant & Bar</li>
+      <li>+ Swimming Pool</li>
+      <li>+ Wellness & Spa</li>
+      <li>+ Restaurant</li>
+      <li>+ Coference Room</li>
+      <li>+ Coctail Party House</li>
+
+    </ul>
+
+    <ul>
+      <li>+ Gaming Zone</li>
+      <li>+ Marriage Party</li>
+      <li>+ Party Planning</li>
+      <li>+ Tour Consultancy</li>
+    </ul>
+  </div>
+
+
+  <div class="footer__contact">
+  <h4 class="contact">Contact Us.</h4><br/>
+
+    <div class="contact__icon">
+      <img src="./assets/footer/mobile.png" alt="mobile" />
+      <p>Phone Number <br />
+        <small>+987 876 765 76 577</small>
+      </p>
+    </div>
+
+    <div class="contact__icon">
+      <img src="./assets/footer/message.png" alt="message" />
+      <p>Phone Number <br />
+        <small>+987 876 765 76 577</small>
+      </p>
+
+    </div>
+
+    <div class="contact__icon">
+      <img src="./assets/footer/location.png" alt="location" />
+      <p>Phone Number <br />
+        <small>+987 876 765 76 577</small>
+      </p>
+    </div>
+
+  </div>
+
+
+</footer>
+<div class="footer__policy">
+  <h4>Copyright By@Example - 2020</h4>
+  <h4>Terms of use | Privacy Environmental Policy</h4>
+</div>
+
+</html>

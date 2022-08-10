@@ -6,24 +6,14 @@ use App\Http\Controllers\ContactsController;
 use App\Http\Controllers\RoomsController;
 use App\Http\Controllers\BookingsController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 // Rutas: Home, about, room grid, room list, room details, offers, contacts.
 
 Route::get('/', function () {
-    return 'Home';
+    return view('home');
 });
 
 Route::get('/about', function () {
-    return 'About';
+    return view('about');
 });
 
 Route::get('/offers', function () {
