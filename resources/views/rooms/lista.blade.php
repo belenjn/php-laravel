@@ -83,13 +83,14 @@
         <div class="pricing">
             <h3>${{$room->price}}<small>/Night</small></h3>
             <a style="font-size: 12px; margin-top: 20px;" href="/roomDetail/{id}">Book Now</a>
-            //TODO: hacer la pagina de room detail y hacer lo del form de inicio para que muestre las disponibles en room list
         </div>
           
     </div>
 @endforeach
 
 </div>
+
+<!-- //TODO: hacer la pagina de room detail y hacer lo del form de inicio para que muestre las disponibles en room list -->
 
 </body>
 
