@@ -12,7 +12,7 @@
 .header .header__container .header__container-titles {
     border: 1px solid transparent;
 }
-.header .header__container h4 { 
+.header .header__container h4 {
     font-family: "Archivo", sans-serif !important;
     letter-spacing: 2.8px;
     font-weight: 400;
@@ -243,12 +243,43 @@ button {
 }
 
 .slider__container--bottom {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     margin: auto;
     margin-top: 20px;
-    width: 80%;
+    width: 100%;
 }
+
+.rooms {
+    display: grid;
+    grid-column: 2;
+    width: 100%;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.pricing h3{
+    font-size: 13px;
+
+}
+
+.pricing a {
+    color: #333333;
+    font-family: "Archivo", sans-serif;
+
+}
+
+.pricing a:hover {
+    cursor: pointer;
+    color:#8d8169;
+    transition: 0.3s ease;
+}
+
+.slider__container--bottom img {
+    width: 100%;
+    margin: auto;
+}
+
 .slider__container--bottom h3 {
     font-family: "Old Standard TT", serif !important;
     font-weight: 300;
@@ -845,70 +876,75 @@ footer .footer__contact .contact__icon p small {
 }
 .navbar__header h6 {
     display: none;
-}
-
-.navbar {
+  }
+  
+  .navbar {
     display: flex;
     justify-content: right;
     position: fixed;
     top: 0;
     width: 100%;
     background-color: white;
-}
-.navbar .navbar__container {
+  }
+  .navbar .navbar__container {
     display: flex;
     justify-content: space-between;
     margin-top: 15px;
     width: 100%;
     height: 50%;
-}
-.navbar .navbar__categories {
+  }
+  .navbar .navbar__categories {
     display: none;
-}
-.navbar .navbar__container-icon {
+  }
+  .navbar .navbar__container-icon {
     display: flex;
     width: 20%;
-}
-.navbar .navbar__container-logo {
+  }
+  .navbar .navbar__container-logo {
     display: flex;
     width: 50%;
     height: 100%;
-}
-.navbar .navbar__container-icons-right {
+  }
+  .navbar .navbar__container-icons-right {
     display: flex;
     width: 25%;
-}
-.navbar{
+  }
+  .navbar .navbar__logo {
     margin-top: 15px;
     width: 100px;
     height: 60px;
     display: flex;
     justify-content: center;
-}
-
-.navbar__logo {
-    margin-top: 15px;
-    width: 90px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-}
-
-.navbar .navbar__hamburger {
+  }
+  .navbar .navbar__hamburger {
     width: 20px;
     height: 15px;
     margin: auto;
     background-image: url(../../assets/nav/hamburger-icon.png);
     cursor: pointer;
     border: none;
-}
-.navbar .navbar__person,
-.navbar .navbar__search {
+  }
+  .navbar .navbar__person,
+  .navbar .navbar__search {
     margin-left: 20px;
     margin: auto;
-}
+  }
 
 @media only screen and (min-width: 1000px) {
+    .rooms {
+        display: grid;
+        grid-column: 2;
+        width: 70%;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+
+    .slider__container--bottom img {
+        width: 90%;
+        margin: auto;
+        padding: 10px;
+    }
     .navbar__header {
         display: flex;
         justify-content: right;
@@ -1240,6 +1276,7 @@ body .slider__pagination img {
         height: 500px;
         width: 800px;
         margin-top: 50px;
+        z-index: -1;
     }
 
     .custom-map-control-button {
@@ -1374,5 +1411,3 @@ body .slider__pagination img {
         cursor: pointer;
     }
 }
-
-/*# sourceMappingURL=main.css.map */

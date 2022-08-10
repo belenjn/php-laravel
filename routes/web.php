@@ -16,8 +16,10 @@ Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/offers', function () {
-    return 'Offers';
+
+
+Route::get('/contact', function () {
+    return view('contact');
 });
 
 

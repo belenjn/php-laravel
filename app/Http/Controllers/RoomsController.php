@@ -16,7 +16,7 @@ class RoomsController extends Controller
 
     public function index()
     {
-        $rooms = $this->rooms->getRooms();
+        $rooms = Rooms::all();
         return view('rooms.lista', ['rooms' => $rooms]);
     }
 

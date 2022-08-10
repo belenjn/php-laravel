@@ -21,9 +21,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/home.css')}}" />
 
-    <title>Ultimate Room</title>
-</head>
 
+    <title>About Us</title>
+</head>
 <div class="navbar__header">
 
     <nav class="navbar">
@@ -51,11 +51,11 @@
 <header>
     <div class="header__cover">
         <h4>THE ULTIMATE LUXURY</h4>
-        <h1>Ultimate Room</h1>
+        <h1>New Details</h1>
 
         <div class="header__cover--choices">
             <a>Home |</a>
-            <a class="about">Rooms</a>
+            <a class="about">Contact</a>
 
         </div>
     </div>
@@ -63,104 +63,102 @@
 </header>
 
 <body>
+   
+    <div id="map" class="map"></div>
+    <div class="buttons">
 
+        <div class="input__container">
+            <input type=”text” id="input__text" />
+            <button id="button__input">Send</button>
 
-
-<div class="slider__container--bottom">
-
-@foreach ($rooms as $room)
-
-    <div class="rooms">
-    <img src="{{asset('assets/rooms/room.jpg')}}" />
-
-            <h3>
-            @if ($room->bed_type === 'single_bed') Single bed @endif 
-            @if ($room->bed_type === 'double_bed') Double bed @endif
-            @if ($room->bed_type === 'double_superior') Double superior @endif
-            @if ($room->bed_type === 'suite') Suite @endif
-            <h3/>
-
-        <div class="pricing">
-            <h3>${{$room->price}}<small>/Night</small></h3>
-            <a style="font-size: 12px; margin-top: 20px;" href="/roomDetail/{id}">Book Now</a>
-            //TODO: hacer la pagina de room detail y hacer lo del form de inicio para que muestre las disponibles en room list
         </div>
-          
+
+        <div class="select__container">
+             <button id="button__location">Find my nearest location</button>
+
+        <select class="selector" id="selector__comunidades" name="select">
+            
+        </select>
+        </div>
+       
+
     </div>
-@endforeach
+    <div id="locations"></div>
 
-</div>
-
-</body>
 
 
 <footer>
     <div class="footer__socials">
-  
-      <img src="./assets/footer/Logo.png" />
-  
-      <p>Lorem ipsum dolor sit amet, consect etur adipisicing elit, sed doing eius mod tempor incididunt ut labore et
-        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat ion ullamco laboris nisi.</p>
-  
-      <img src="./assets/footer/Socials.png" class="socials" />
-  
+
+        <img src="./assets/footer/Logo.png" />
+
+        <p>Lorem ipsum dolor sit amet, consect etur adipisicing elit, sed doing eius mod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat ion ullamco laboris nisi.</p>
+
+        <img src="./assets/footer/Socials.png" class="socials" />
+
     </div>
-  
-  
-  
+
+
+
     <div class="footer__services">
-    <h4>Services.</h4> <br/>
-  
-      <ul>
-        <li>+ Resturent & Bar</li>
-        <li>+ Swimming Pool</li>
-        <li>+ Wellness & Spa</li>
-        <li>+ Restaurant</li>
-        <li>+ Coference Room</li>
-        <li>+ Coctail Party House</li>
-  
-      </ul>
-  
-      <ul>
-        <li>+ Gaming Zone</li>
-        <li>+ Marriage Party</li>
-        <li>+ Party Planning</li>
-        <li>+ Tour Consultancy</li>
-      </ul>
+        <h4>Services.</h4> <br />
+
+        <ul>
+            <li>+ Resturent & Bar</li>
+            <li>+ Swimming Pool</li>
+            <li>+ Wellness & Spa</li>
+            <li>+ Restaurant</li>
+            <li>+ Coference Room</li>
+            <li>+ Coctail Party House</li>
+
+        </ul>
+
+        <ul>
+            <li>+ Gaming Zone</li>
+            <li>+ Marriage Party</li>
+            <li>+ Party Planning</li>
+            <li>+ Tour Consultancy</li>
+        </ul>
     </div>
-  
-  
+
+
     <div class="footer__contact">
-    <h4 class="contact">Contact Us.</h4><br/>
-  
-      <div class="contact__icon">
-        <img src="./assets/footer/mobile.png" alt="mobile" />
-        <p>Phone Number <br />
-          <small>+987 876 765 76 577</small>
-        </p>
-      </div>
-  
-      <div class="contact__icon">
-        <img src="./assets/footer/message.png" alt="message" />
-        <p>Phone Number <br />
-          <small>+987 876 765 76 577</small>
-        </p>
-  
-      </div>
-  
-      <div class="contact__icon">
-        <img src="./assets/footer/location.png" alt="location" />
-        <p>Phone Number <br />
-          <small>+987 876 765 76 577</small>
-        </p>
-      </div>
-  
+        <h4 class="contact">Contact Us.</h4><br />
+
+        <div class="contact__icon">
+            <img src="./assets/footer/mobile.png" alt="mobile" />
+            <p>Phone Number <br />
+                <small>+987 876 765 76 577</small>
+            </p>
+        </div>
+
+        <div class="contact__icon">
+            <img src="./assets/footer/message.png" alt="message" />
+            <p>Phone Number <br />
+                <small>+987 876 765 76 577</small>
+            </p>
+
+        </div>
+
+        <div class="contact__icon">
+            <img src="./assets/footer/location.png" alt="location" />
+            <p>Phone Number <br />
+                <small>+987 876 765 76 577</small>
+            </p>
+        </div>
+
     </div>
-  
-  
-  </footer>
-  <div class="footer__policy">
+
+
+</footer>
+<div class="footer__policy">
     <h4>Copyright By@Example - 2020</h4>
     <h4>Terms of use | Privacy Environmental Policy</h4>
-  </div>
+</div>
+<script type="text/javascript" src="{{asset('js/contact.js')}}"></script>
+<script async defer
+    src="{{asset('https://maps.googleapis.com/maps/api/js?key=AIzaSyA9Y7Af9prP4lE5-AncFsKvuNxvO8-b8ak&callback=initMap')}}"></script>
+</body>
+
 </html>
