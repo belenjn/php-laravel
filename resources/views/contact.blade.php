@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="{{asset('css/home.css')}}" />
 
 
-    <title>About Us</title>
+    <title>Contact</title>
 </head>
 <div class="navbar__header">
 
@@ -156,6 +156,10 @@
     <h4>Copyright By@Example - 2020</h4>
     <h4>Terms of use | Privacy Environmental Policy</h4>
 </div>
+<?php
+   $environment =  env("API_KEY_MAPS", 1)
+?>
+
 <script type="text/javascript" src="{{asset('js/contact.js')}}"></script>
 <script async defer
     src="{{asset('https://maps.googleapis.com/maps/api/js?key=AIzaSyA9Y7Af9prP4lE5-AncFsKvuNxvO8-b8ak&callback=initMap')}}"></script>

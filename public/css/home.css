@@ -266,13 +266,16 @@ button {
 .pricing a {
     color: #333333;
     font-family: "Archivo", sans-serif;
+    text-decoration: none;
 
 }
 
 .pricing a:hover {
     cursor: pointer;
     color:#8d8169;
-    transition: 0.3s ease;
+    text-decoration: underline;
+    transition: 0.1s ease;
+
 }
 
 .slider__container--bottom img {
@@ -910,9 +913,9 @@ footer .footer__contact .contact__icon p small {
     width: 25%;
   }
   .navbar .navbar__logo {
-    margin-top: 15px;
-    width: 100px;
-    height: 60px;
+    margin-bottom: 5px;
+    width: 110px;
+    height: 45px;
     display: flex;
     justify-content: center;
   }
@@ -1006,10 +1009,13 @@ footer .footer__contact .contact__icon p small {
         margin-right: 90px;
     }
     .navbar__header .navbar .navbar__logo {
-        width: 200px;
-        height: 120px;
-        margin-left: -20px;
+        margin-top: 20px;
+        width: 170px;
+        height: 70px;
+        margin-left: 20px;
     }
+
+    
     .navbar__header .navbar .navbar__person,
     .navbar__header .navbar .navbar__search {
         border: 1px solid rgba(171, 167, 167, 0.459);
