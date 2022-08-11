@@ -54,7 +54,7 @@
         <h1>Ultimate Room</h1>
 
         <div class="header__cover--choices">
-            <a>Home |</a>
+        <a href="/" style="text-decoration: none; color: black;">Home |</a>
             <a class="about">Rooms</a>
 
         </div>

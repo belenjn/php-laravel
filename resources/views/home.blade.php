@@ -65,20 +65,33 @@
             <label for="size_1">Arrival Date</label>
             <br />
             <img src="./assets/form/Group.png" alt="calendar icon" />
-            <input class="form__input" type="text" placeholder="24th march 2020" />
+            <input class="form__input" type="text" placeholder="24th march 2020" name="checkin" method="POST" action="formPost.php" value=""/>
           </p>
           <p>
             <label for="size_2">Departure Date</label>
             <br />
             <img src="./assets/form/Group.png" alt="calendar icon" />
-            <input class="form__input" type="text" placeholder="30th march 2020">
+            <input class="form__input" type="text" placeholder="30th march 2020" name="checkout" method="POST" action="formPost.php" value="">
             </input>
           </p>
-          <button class="button__primary">CHECK AVAILABILITY</button>
+          <button class="button__primary" type="submit" name="button">CHECK AVAILABILITY</button>
 
         </fieldset>
       </form>
     </div>
+
+    
+    
+<?php
+
+//    $checkin = $_POST['checkin'];
+
+//  DB::select('SELECT checkin FROM bookings WHERE checkin = "2023-05-13 "')
+
+   // 2023-05-13 | 2023-07-27
+
+?>
+
 
   </header>
 
