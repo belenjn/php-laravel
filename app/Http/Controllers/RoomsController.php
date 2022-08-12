@@ -9,11 +9,6 @@ class RoomsController extends Controller
 {
     protected $rooms;
 
-    public function __construct(Rooms $rooms)
-    {
-        $this->rooms = $rooms;
-    }
-
     public function index()
     {
         $rooms = Rooms::all();
@@ -34,13 +29,13 @@ class RoomsController extends Controller
 
     public function show($id)
     {
-        $room = $this->rooms->getRoom($id);
+        $room = Rooms::find($id);
         return view('rooms.ver', ['room' => $room]);
     }
 
     public function edit($id)
     {
-        $room = $this->rooms->getRoom($id);
+        $room = Rooms::find($id);
         return view('rooms.editar', ['room' => $room]);
     }
 

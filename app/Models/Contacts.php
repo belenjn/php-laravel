@@ -15,15 +15,5 @@ class Contacts extends Model
 
     public $timestamps = false;
 
-    public function getContacts()
-    {
-        return Contacts::all();
-    }
-
-    protected $primaryKey = 'contact_id';
-
-    public function getContact($id)
-    {
-        return Contacts::find($id);
-    }
+   
 }

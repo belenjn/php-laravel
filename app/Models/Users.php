@@ -15,15 +15,4 @@ class Users extends Model
 
     public $timestamps = false;
 
-    public function getUsers()
-    {
-        return Users::all();
-    }
-
-    protected $primaryKey = 'user_id';
-
-    public function getUser($id)
-    {
-        return Users::find($id);
-    }
 }

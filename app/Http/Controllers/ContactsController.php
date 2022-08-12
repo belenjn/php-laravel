@@ -9,16 +9,12 @@ class ContactsController extends Controller
 {
     protected $contacts;
 
-    public function __construct(Contacts $contacts)
-    {
-        $this->contacts = $contacts;
-    }
-
     public function index()
     {
-        $contacts = $this->contacts->getContacts();
+        $contacts = Contacts::all():
         return view('contacts.lista', ['contacts' => $contacts]);
     }
+
     public function create()
     {
         return view('contacts.crear');
@@ -33,13 +29,13 @@ class ContactsController extends Controller
 
     public function show($id)
     {
-        $contact = $this->contacts->getContact($id);
+        $contact = Contacts::find($id);
         return view('contacts.ver', ['contact' => $contact]);
     }
 
     public function edit($id)
     {
-        $contact = $this->contacts->getContact($id);
+        $contact = Contacts::find($id);
         return view('contacts.editar', ['contact' => $contact]);
     }
 

@@ -15,15 +15,4 @@ class Rooms extends Model
 
     public $timestamps = false;
 
-    public function getRooms()
-    {
-        return Rooms::all();
-    }
-
-    protected $primaryKey = 'room_id';
-
-    public function getRoom($id)
-    {
-        return Rooms::find($id);
-    }
 }

@@ -9,14 +9,10 @@ class UsersController extends Controller
 {
     protected $users;
 
-    public function __construct(Users $users)
-    {
-        $this->users = $users;
-    }
 
     public function index()
     {
-        $users = $this->users->getUsers();
+        $user = Users::find($id);
         return view('users.lista', ['users' => $users]);
     }
 
@@ -34,13 +30,13 @@ class UsersController extends Controller
 
     public function show($id)
     {
-        $user = $this->users->getUser($id);
+        $user = Users::find($id);
         return view('users.ver', ['user' => $user]);
     }
 
     public function edit($id)
     {
-        $user = $this->users->getUser($id);
+        $user = Users::find($id);
         return view('users.editar', ['user' => $user]);
     }
 

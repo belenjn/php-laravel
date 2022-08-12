@@ -9,14 +9,9 @@ class BookingsController extends Controller
 {
     protected $bookings;
 
-    public function __construct(Bookings $bookings)
-    {
-        $this->bookings = $bookings;
-    }
-
     public function index()
     {
-        $bookings = $this->bookings->getBookings();
+        $bookings = Bookings::all():
         return view('bookings.lista', ['bookings' => $bookings]);
     }
 
@@ -35,14 +30,14 @@ class BookingsController extends Controller
   
     public function show($id)
     {
-        $booking = $this->bookings->getBooking($id);
+        $booking = Bookings::find($id);
         return view('bookings.ver', ['booking' => $booking]);
     }
 
    
     public function edit($id)
     {
-        $booking = $this->bookings->getBooking($id);
+        $booking = Bookings::find($id):
         return view('bookings.editar', ['booking' => $booking]);
     }
 
