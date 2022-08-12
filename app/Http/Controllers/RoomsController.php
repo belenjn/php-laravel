@@ -33,6 +33,7 @@ class RoomsController extends Controller
         return view('rooms.ver', ['room' => $room]);
     }
 
+    
     public function edit($id)
     {
         $room = Rooms::find($id);

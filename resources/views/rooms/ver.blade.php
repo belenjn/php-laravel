@@ -19,10 +19,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/home.css')}}" />
-<<<<<<< HEAD
-=======
     <link rel="stylesheet" href="{{asset('css/room-details.css')}}" />
->>>>>>> 58a25ccf22c7530789f2362f94fbfcf5f77d13b0
 
     <title>Room</title>
 </head>
@@ -57,38 +54,16 @@
         <h1>Ultimate Room</h1>
 
         <div class="header__cover--choices">
-<<<<<<< HEAD
-            <a>Home |</a>
-            <a class="about">Rooms</a>
-=======
+       
             <a href="/" style="text-decoration: none; color:black;">Home |</a>
             <a class="about" >Rooms</a>
->>>>>>> 58a25ccf22c7530789f2362f94fbfcf5f77d13b0
 
         </div>
     </div>
 
 </header>
 <body>
-<<<<<<< HEAD
-    <a href="/rooms">See all rooms</a>
-   <h2>Room Detail:</h2> 
-   <div class="grid">
-   <div class="text">
-       <p><b>Id: </b>{{ $room->room_id}}</p>
-       <p><b>Number: </b>{{ $room->room_number}}</p>
-       <p><b>Bed Type: </b>{{ $room->bed_type}}</p>
-       <p><b>Description: </b>{{ $room->description}}</p>
-       <p><b>Offer: </b>{{ $room->offer}}</p>
-       <p><b>Price: </b>{{ $room->price}}</p>
-       <p><b>Discount: </b>{{ $room->discount}}</p>
-       <p><b>Cancellation: </b>{{ $room->cancellation}}</p>
-       <p><b>Amenities: </b>{{ $room->amenities}}</p>
-   </div>
-
-   </div>
-=======
-
+   
 <div class="room__name">
           <h2>   @if ($room->bed_type === 'single_bed') Single bed @endif 
             @if ($room->bed_type === 'double_bed') Double bed @endif
@@ -125,7 +100,6 @@
 
 </div>
 
->>>>>>> 58a25ccf22c7530789f2362f94fbfcf5f77d13b0
    
 </body>
 <footer>

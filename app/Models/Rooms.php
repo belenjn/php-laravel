@@ -14,5 +14,30 @@ class Rooms extends Model
     protected $fillable = ["room_number", "bed_type", "description", "offer", "price", "discount", "cancellation", "amenities"];
 
     public $timestamps = false;
+    
+    protected $primaryKey = "room_id";
+
+    public function bedTypeNames($bed_type)
+    {
+        switch($bed_type){
+            case 'single_bed':
+            echo 'Single bed';
+            break;
+
+            case 'double_bed':
+            echo 'Double bed';
+            break;
+              
+            case 'double_superior':
+            echo 'Double superior';
+            break;
+              
+            case 'suite':
+            echo 'Suite';
+            break;
+                
+
+        }
+    }
 
 }

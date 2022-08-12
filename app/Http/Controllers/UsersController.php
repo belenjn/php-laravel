@@ -9,7 +9,6 @@ class UsersController extends Controller
 {
     protected $users;
 
-
     public function index()
     {
         $user = Users::find($id);
