@@ -19,6 +19,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/home.css')}}" />
+<<<<<<< HEAD
+=======
+    <link rel="stylesheet" href="{{asset('css/room-details.css')}}" />
+>>>>>>> 58a25ccf22c7530789f2362f94fbfcf5f77d13b0
 
     <title>Room</title>
 </head>
@@ -53,14 +57,20 @@
         <h1>Ultimate Room</h1>
 
         <div class="header__cover--choices">
+<<<<<<< HEAD
             <a>Home |</a>
             <a class="about">Rooms</a>
+=======
+            <a href="/" style="text-decoration: none; color:black;">Home |</a>
+            <a class="about" >Rooms</a>
+>>>>>>> 58a25ccf22c7530789f2362f94fbfcf5f77d13b0
 
         </div>
     </div>
 
 </header>
 <body>
+<<<<<<< HEAD
     <a href="/rooms">See all rooms</a>
    <h2>Room Detail:</h2> 
    <div class="grid">
@@ -77,6 +87,45 @@
    </div>
 
    </div>
+=======
+
+<div class="room__name">
+          <h2>   @if ($room->bed_type === 'single_bed') Single bed @endif 
+            @if ($room->bed_type === 'double_bed') Double bed @endif
+            @if ($room->bed_type === 'double_superior') Double superior @endif
+            @if ($room->bed_type === 'suite') Suite @endif
+        </h2>
+       
+        <div class="pricing">
+            <h3>${{$room->price}}<small>/Night</small></h3>
+        </div>
+
+       
+</div>
+
+
+<img src="{{asset('assets/rooms/room.jpg')}}" class="room__image" />
+
+<div class="room__description">
+<p>{{$room->description}}</p>
+
+</div>
+
+<div class="room__amenities">
+    <h2>Amenities</h2>
+    <hr>
+    <p>{{$room->amenities}}</p>
+
+</div>
+
+<div class="room__amenities">
+    <h2>Cancellation</h2>
+    <hr>
+    <p class="cancellation">{{$room->cancellation}}</p>
+
+</div>
+
+>>>>>>> 58a25ccf22c7530789f2362f94fbfcf5f77d13b0
    
 </body>
 <footer>
