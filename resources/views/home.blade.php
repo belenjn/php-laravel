@@ -59,7 +59,7 @@
     </div>
 
     <div class="form__container">
-      <form>
+      <form action="" method="get">
         <fieldset>
           <p>
             <label for="size_1">Arrival Date</label>
