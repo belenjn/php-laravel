@@ -65,7 +65,8 @@
 <body>
    
 <div class="room__name">
-          <h2>   @if ($room->bed_type === 'single_bed') Single bed @endif 
+          <h2>
+            @if ($room->bed_type === 'single_bed') Single bed @endif 
             @if ($room->bed_type === 'double_bed') Double bed @endif
             @if ($room->bed_type === 'double_superior') Double superior @endif
             @if ($room->bed_type === 'suite') Suite @endif

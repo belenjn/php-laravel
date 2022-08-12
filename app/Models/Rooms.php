@@ -17,9 +17,9 @@ class Rooms extends Model
     
     protected $primaryKey = "room_id";
 
-    public function bedTypeNames($bed_type)
+    public function bedTypeNames()
     {
-        switch($bed_type){
+        switch($this->bed_type){
             case 'single_bed':
             echo 'Single bed';
             break;
@@ -35,8 +35,6 @@ class Rooms extends Model
             case 'suite':
             echo 'Suite';
             break;
-                
-
         }
     }
 
