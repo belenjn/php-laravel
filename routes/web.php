@@ -6,29 +6,22 @@ use App\Http\Controllers\ContactsController;
 use App\Http\Controllers\RoomsController;
 use App\Http\Controllers\BookingsController;
 
-// Rutas: Home, about, room grid, room list, room details, offers, contacts.
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 
 Route::get('/about', function () {
     return view('about');
-});
+})->name('about');
 
 Route::get('/offers', function () {
     return view('offers');
-});
+})->name('offers');
 
 Route::get('/contact', function () {
     return view('contact');
-});
-
-
-Route::get('/contacts', [ContactsController::class, 'index'])->name('contacts');
-Route::get('/contacts/crear', [ContactsController::class, 'create'])->name('createContacts');
-Route::post('/contacts/crear', [ContactsController::class, 'store'])->name('saveContacts');
-Route::get('/contacts/ver/{id}', [ContactsController::class, 'show'])->name('showContact');
+})->name('contact');
 
 
 Route::get('/rooms', [RoomsController::class, 'index'])->name('rooms');
@@ -41,8 +34,8 @@ Route::get('/bookings', [BookingsController::class, 'index'])->name('bookings');
 Route::get('/bookings/crear', [BookingsController::class, 'create'])->name('createBookings');
 Route::post('/bookings/crear', [BookingsController::class, 'store'])->name('saveBookings');
 
-
-
+ 
+?>
 
 
 
