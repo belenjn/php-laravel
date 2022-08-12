@@ -25,21 +25,21 @@ Route::get('/contact', function () {
 });
 
 
-Route::get('/contacts', [ContactsController::class, 'index']);
-Route::get('/contacts/crear', [ContactsController::class, 'create']);
-Route::post('/contacts/crear', [ContactsController::class, 'store']);
-Route::get('/contacts/ver/{id}', [ContactsController::class, 'show']);
+Route::get('/contacts', [ContactsController::class, 'index'])->name('contacts');
+Route::get('/contacts/crear', [ContactsController::class, 'create'])->name('createContacts');
+Route::post('/contacts/crear', [ContactsController::class, 'store'])->name('saveContacts');
+Route::get('/contacts/ver/{id}', [ContactsController::class, 'show'])->name('showContact');
 
 
-Route::get('/rooms', [RoomsController::class, 'index']);
-Route::get('/rooms/crear', [RoomsController::class, 'create']);
-Route::post('/rooms/crear', [RoomsController::class, 'store']);
-Route::get('/rooms/ver/{id}', [RoomsController::class, 'show']);
+Route::get('/rooms', [RoomsController::class, 'index'])->name('rooms');
+Route::get('/rooms/crear', [RoomsController::class, 'create'])->name('createRooms');
+Route::post('/rooms/crear', [RoomsController::class, 'store'])->name('saveRooms');
+Route::get('/rooms/ver/{id}', [RoomsController::class, 'show'])->name('showRoom');
 
 
-Route::get('/bookings', [BookingsController::class, 'index']);
-Route::get('/bookings/crear', [BookingsController::class, 'create']);
-Route::post('/bookings/crear', [BookingsController::class, 'store']);
+Route::get('/bookings', [BookingsController::class, 'index'])->name('bookings');
+Route::get('/bookings/crear', [BookingsController::class, 'create'])->name('createBookings');
+Route::post('/bookings/crear', [BookingsController::class, 'store'])->name('saveBookings');
 
 
 
