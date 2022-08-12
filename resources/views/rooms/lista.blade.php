@@ -82,7 +82,7 @@
 
         <div class="pricing">
             <h3>${{$room->price}}<small>/Night</small></h3>
-            <a style="font-size: 12px; margin-top: 20px;" href="/roomDetail/{id}">Book Now</a>
+            <a style="font-size: 12px; margin-top: 20px;" href="/rooms/ver/{{$room->room_id}}">Book Now</a>
         </div>
           
     </div>
