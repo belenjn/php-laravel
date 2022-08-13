@@ -20,6 +20,7 @@ Route::get('/contact', function () {
 })->name('contact');
 
 Route::get('/offers', [RoomsController::class, 'indexOffers']);
+
 Route::get('/rooms', [RoomsController::class, 'index'])->name('rooms');
 Route::get('/rooms/crear', [RoomsController::class, 'create'])->name('createRooms');
 Route::post('/rooms/crear', [RoomsController::class, 'store'])->name('saveRooms');
