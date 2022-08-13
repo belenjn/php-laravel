@@ -2,6 +2,7 @@
 
 Hotel Miranda's front page for clients. 
 It has information about available rooms, offers, contact and information about the hotel. 
+Done with: PHP, Laravel and Docker.
 
 # Getting started
 
