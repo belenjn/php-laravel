@@ -15,6 +15,12 @@ class RoomsController extends Controller
         return view('rooms.lista', ['rooms' => $rooms]);
     }
 
+    public function indexOffers()
+    {
+        $rooms = Rooms::all();
+        return view('offers.lista', ['rooms' => $rooms]);
+    }
+
     public function create()
     {
         return view('rooms.crear');
