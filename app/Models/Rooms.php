@@ -17,25 +17,6 @@ class Rooms extends Model
     
     protected $primaryKey = "room_id";
 
-    public function bedTypeNames()
-    {
-        switch($this->bed_type){
-            case 'single_bed':
-            echo 'Single bed';
-            break;
 
-            case 'double_bed':
-            echo 'Double bed';
-            break;
-              
-            case 'double_superior':
-            echo 'Double superior';
-            break;
-              
-            case 'suite':
-            echo 'Suite';
-            break;
-        }
-    }
 
 }

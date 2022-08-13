@@ -16,11 +16,12 @@ class BookingsController extends Controller
     }
 
   
-    public function show($id)
+    public function show(Request $request)
     {
-        $booking = Bookings::find($id);
-        return view('bookings.ver', ['booking' => $booking]);
+        $checkin = $request->input('checkin');
+        return view('bookings.lista', ['checkin' => $checkin]);
     }
+
 
 
 

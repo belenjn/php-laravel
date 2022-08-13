@@ -24,10 +24,15 @@
 <body>
 
 
-
 <div class="slider__container--bottom">
 
 @foreach ($bookings as $booking)
+<img src="{{asset('assets/rooms/room3.jpg')}}" style='
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+    width: 770px;
+    height: 490px;'/>
 
     <div class="rooms">
 
